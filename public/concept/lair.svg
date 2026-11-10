@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Segoe UI, Leelawadee UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#061628"/>
+      <stop offset="1" stop-color="#010307"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fe3d0" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#5fe3d0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16395a"/>
+      <stop offset=".55" stop-color="#081a2c"/>
+      <stop offset="1" stop-color="#02060d"/>
+    </linearGradient>
+    <radialGradient id="eye"><stop offset="0" stop-color="#ffd0d7"/><stop offset=".35" stop-color="#ff2e4d"/><stop offset="1" stop-color="#ff2e4d" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <path d="M520 0 H700 L860 700 H380 Z" fill="url(#shaft)"/>
+
+  <!-- trench walls -->
+  <path d="M0 0 H260 L300 90 L240 170 L310 260 L250 360 L330 460 L280 560 L360 700 H0 Z" fill="#030a12" stroke="#5fe3d0" stroke-opacity=".25"/>
+  <path d="M1200 0 H930 L890 110 L960 200 L880 300 L950 400 L870 510 L930 600 L850 700 H1200 Z" fill="#030a12" stroke="#5fe3d0" stroke-opacity=".25"/>
+
+  <!-- seabed -->
+  <path d="M300 700 C420 640 520 660 600 650 C700 640 780 660 880 700 Z" fill="#050d16"/>
+
+  <!-- kraken remains -->
+  <g fill="none" stroke="#3b1b2a" stroke-width="18" stroke-linecap="round">
+    <path d="M420 690 C470 620 560 640 600 600 C640 560 700 590 720 560"/>
+  </g>
+  <g fill="none" stroke="#3b1b2a" stroke-width="10" stroke-linecap="round">
+    <path d="M640 695 C680 650 760 670 790 620 C810 590 840 600 850 580"/>
+  </g>
+  <g fill="#6b3046">
+    <circle cx="470" cy="642" r="4"/><circle cx="510" cy="632" r="4"/><circle cx="555" cy="628" r="4"/>
+    <circle cx="600" cy="600" r="3.5"/><circle cx="650" cy="580" r="3.5"/><circle cx="690" cy="578" r="3"/>
+    <circle cx="720" cy="650" r="3"/><circle cx="760" cy="648" r="3"/><circle cx="795" cy="615" r="2.5"/>
+  </g>
+
+  <!-- bioluminescent life -->
+  <g fill="#5fe3d0" filter="url(#glow)">
+    <circle cx="330" cy="200" r="3"/><circle cx="350" cy="230" r="2"/><circle cx="380" cy="190" r="2.5"/>
+    <circle cx="870" cy="260" r="3"/><circle cx="840" cy="300" r="2"/><circle cx="900" cy="330" r="2.5"/>
+    <circle cx="420" cy="520" r="2"/><circle cx="800" cy="480" r="2"/><circle cx="560" cy="120" r="1.5"/>
+    <circle cx="660" cy="90" r="1.5"/><circle cx="740" cy="160" r="2"/>
+  </g>
+  <g fill="#b48cff" filter="url(#glow)" opacity=".8">
+    <circle cx="300" cy="420" r="2.5"/><circle cx="920" cy="440" r="2.5"/><circle cx="610" cy="560" r="2"/>
+  </g>
+  <!-- anglerfish lure -->
+  <path d="M860 380 q20 -30 40 -20" stroke="#5fe3d0" stroke-opacity=".5" fill="none"/>
+  <circle cx="900" cy="360" r="4" fill="#fff6b0" filter="url(#glow)"/>
+
+  <!-- sovereign -->
+  <g transform="translate(380 270) scale(.75)">
+    <path fill="url(#body)" stroke="#5fe3d0" stroke-opacity=".55" stroke-width="1.2" d="M30 72 C30 46, 60 34, 124 34 L300 40 C380 46, 450 70, 500 94 L536 104 C556 80, 574 60, 596 48 C588 78, 576 98, 564 112 C578 126, 588 146, 596 172 C572 158, 554 138, 536 120 L500 126 C440 152, 360 166, 270 166 C200 166, 150 156, 112 140 L58 134 C44 133, 38 130, 42 126 L96 120 C58 114, 30 100, 30 72 Z"/>
+    <path d="M190 150 C200 172, 222 186, 246 188 C232 176, 222 162, 218 150 Z" fill="#06121f"/>
+    <circle cx="132" cy="104" r="22" fill="url(#eye)"/>
+    <circle cx="132" cy="104" r="3.5" fill="#ffe3e7"/>
+  </g>
+
+  <text x="40" y="630" fill="#5fe3d0" font-size="15" letter-spacing="4">CONCEPT 04 · ENVIRONMENT</text>
+  <text x="40" y="666" fill="#dce8f2" font-size="30" font-weight="700">NORTHFALL TRENCH — 3,000 m</text>
+</svg>

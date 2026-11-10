@@ -81,6 +81,10 @@ export const ui = {
     paletteHint: { th: 'คลิกที่สีเพื่อคัดลอกรหัส', en: 'Click a swatch to copy its hex code.' },
     copied: { th: 'คัดลอกแล้ว ✓', en: 'Copied ✓' },
     notes: { th: 'บันทึกการออกแบบ', en: 'Design Notes' },
+    concepts: { th: 'ภาพคอนเซ็ปต์', en: 'Concept Art' },
+    conceptsHint: { th: 'คลิกที่ภาพเพื่อดูขนาดเต็ม', en: 'Click an image to view it full size.' },
+    prev: { th: 'ภาพก่อนหน้า', en: 'Previous image' },
+    next: { th: 'ภาพถัดไป', en: 'Next image' },
   },
 
   footer: {

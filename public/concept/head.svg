@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Segoe UI, Leelawadee UI, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx=".35" cy=".45" r=".8">
+      <stop offset="0" stop-color="#0d2a44"/>
+      <stop offset="1" stop-color="#02060d"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a4164"/>
+      <stop offset=".5" stop-color="#0a1e33"/>
+      <stop offset="1" stop-color="#03080f"/>
+    </linearGradient>
+    <radialGradient id="eye"><stop offset="0" stop-color="#fff0f2"/><stop offset=".3" stop-color="#ff2e4d"/><stop offset="1" stop-color="#ff2e4d" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <!-- head at 3.5x : abs = 20 + 3.5 * whale -->
+  <g transform="translate(20 20) scale(3.5)">
+    <path fill="url(#body)" stroke="#5fe3d0" stroke-opacity=".45" stroke-width=".4" d="M30 72 C30 46, 60 34, 124 34 L300 40 C380 46, 450 70, 500 94 L536 104 C556 80, 574 60, 596 48 C588 78, 576 98, 564 112 C578 126, 588 146, 596 172 C572 158, 554 138, 536 120 L500 126 C440 152, 360 166, 270 166 C200 166, 150 156, 112 140 L58 134 C44 133, 38 130, 42 126 L96 120 C58 114, 30 100, 30 72 Z"/>
+    <!-- skin wrinkles -->
+    <g fill="none" stroke="#5fe3d0" stroke-opacity=".08" stroke-width=".5">
+      <path d="M150 50c20 4 40 2 60 6M160 70c25 5 50 2 80 8M140 90c30 4 60 0 100 10M170 120c20 3 50 0 80 6M200 140c20 2 40 0 60 4"/>
+    </g>
+    <!-- spermaceti organ -->
+    <ellipse cx="112" cy="62" rx="72" ry="19" fill="#5fe3d0" fill-opacity=".05" stroke="#5fe3d0" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2 1.5"/>
+    <!-- sucker scars -->
+    <g fill="none" stroke="#d9d2c3" stroke-opacity=".4" stroke-width=".6">
+      <circle cx="58" cy="56" r="5"/><circle cx="58" cy="56" r="2"/>
+      <circle cx="74" cy="46" r="4"/><circle cx="74" cy="46" r="1.5"/>
+      <circle cx="48" cy="80" r="3.5"/>
+      <circle cx="90" cy="88" r="3"/>
+      <circle cx="160" cy="44" r="4.5"/><circle cx="160" cy="44" r="1.8"/>
+    </g>
+    <!-- harpoon scars + embedded tip -->
+    <g stroke="#d9d2c3" stroke-opacity=".5" stroke-width=".8" stroke-linecap="round">
+      <path d="M220 60l26 18M250 54l18 20M270 110l34 6"/>
+    </g>
+    <path d="M233 69l-14 -20" stroke="#8aa1b5" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M219 49l-3 -6 6 3z" fill="#8aa1b5"/>
+    <!-- jaw + teeth -->
+    <path d="M44 128 L120 124" stroke="#d9d2c3" stroke-opacity=".6" stroke-width=".7" fill="none"/>
+    <g fill="#e8e1d2">
+      <path d="M52 127l2.5 7 2.5 -7z M62 126.6l2.5 7.5 2.5 -7.5z M72 126.1l2.5 8 2.5 -8z M82 125.6l2.5 8 2.5 -8z M92 125.1l2.5 7.5 2.5 -7.5z M102 124.6l2.5 7 2.5 -7z M112 124.2l2 6 2 -6z"/>
+    </g>
+    <!-- eye -->
+    <circle cx="132" cy="104" r="14" fill="url(#eye)" filter="url(#soft)"/>
+    <circle cx="132" cy="104" r="3" fill="#fff0f2"/>
+    <path d="M124 98c5 -3 11 -3 16 0" stroke="#d9d2c3" stroke-opacity=".4" stroke-width=".6" fill="none"/>
+  </g>
+
+  <text x="40" y="58" fill="#5fe3d0" font-size="15" letter-spacing="4">CONCEPT 02 · HEAD STUDY</text>
+
+  <!-- callouts -->
+  <g stroke="#5fe3d0" stroke-opacity=".75" fill="none">
+    <path d="M440 160 L520 100 H640"/>
+    <path d="M223 216 L170 130 H90"/>
+    <path d="M482 384 L640 420 H760"/>
+    <path d="M308 470 L360 600 H480"/>
+    <path d="M790 207 L860 140 H980"/>
+  </g>
+  <g fill="#5fe3d0">
+    <circle cx="440" cy="160" r="4"/><circle cx="223" cy="216" r="4"/><circle cx="482" cy="384" r="4"/>
+    <circle cx="308" cy="470" r="4"/><circle cx="790" cy="207" r="4"/>
+  </g>
+  <g fill="#dce8f2" font-size="17" font-weight="700">
+    <text x="648" y="96">SPERMACETI ORGAN</text>
+    <text x="90" y="122" text-anchor="start" dx="-50">KRAKEN SCARS</text>
+    <text x="768" y="416">BLOOD EYE</text>
+    <text x="488" y="596">BONE TEETH</text>
+    <text x="988" y="136">HARPOON #1</text>
+  </g>
+  <g fill="#8aa1b5" font-size="14">
+    <text x="648" y="118">hardened like iron for ramming</text>
+    <text x="40" y="146">sucker rings from the abyss war</text>
+    <text x="768" y="438">the only warm color on him</text>
+    <text x="488" y="618">shown only when attacking</text>
+    <text x="988" y="158">tip still embedded</text>
+  </g>
+</svg>

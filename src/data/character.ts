@@ -25,6 +25,13 @@ export interface Swatch {
   role: L;
 }
 
+export interface Concept {
+  /** ไฟล์ใน public/concept/ — ใช้ .png .jpg .webp หรือ .svg ก็ได้ */
+  file: string;
+  title: L;
+  caption: L;
+}
+
 export const character = {
   name: { th: 'มอร์วาธ', en: 'Morvath' },
   title: { th: 'ราชันแห่งห้วงอนธการ', en: 'The Abyssal Sovereign' },
@@ -161,6 +168,42 @@ export const character = {
     { name: 'Blood Eye', hex: '#FF2E4D', role: { th: 'ดวงตา / จุดอันตราย', en: 'Eye / danger accent' } },
     { name: 'Scar Bone', hex: '#D9D2C3', role: { th: 'แผลเป็น / ฟัน', en: 'Scars / teeth' } },
   ] satisfies Swatch[],
+
+  // ภาพคอนเซ็ปต์ — วางไฟล์ไว้ใน public/concept/ แล้วเพิ่มรายการที่นี่
+  concepts: [
+    {
+      file: 'head.svg',
+      title: { th: 'ศึกษาส่วนหัว', en: 'Head Study' },
+      caption: {
+        th: 'รายละเอียดอวัยวะสเปอร์มาเซติ รอยดูดคราเคน ฟัน ดวงตา และปลายฉมวกที่ยังฝังอยู่',
+        en: 'Spermaceti organ, kraken scars, teeth, eye and the harpoon tip still embedded.',
+      },
+    },
+    {
+      file: 'scale.svg',
+      title: { th: 'เปรียบเทียบขนาด', en: 'Scale Study' },
+      caption: {
+        th: 'มอร์วาธยาว 24 เมตร สูงกว่านักดำน้ำ 13 เท่า',
+        en: 'At 24 m, Morvath dwarfs a human diver thirteen times over.',
+      },
+    },
+    {
+      file: 'attack.svg',
+      title: { th: 'คลิกมรณะ', en: 'Death Click' },
+      caption: {
+        th: 'พุ่งขึ้นจากห้วงลึกแล้วยิงคลื่นโซนาร์ 230 dB จนตัวเรือขนส่งร้าว',
+        en: 'Rising from the deep, a 230 dB sonar blast cracks a cargo ship’s hull.',
+      },
+    },
+    {
+      file: 'lair.svg',
+      title: { th: 'ร่องลึกนอร์ธฟอลล์', en: 'Northfall Trench' },
+      caption: {
+        th: 'บัลลังก์ที่ความลึก 3,000 เมตร ท่ามกลางแสงเรืองและซากหนวดคราเคน',
+        en: 'His throne at 3,000 m, among bioluminescence and the kraken’s remains.',
+      },
+    },
+  ] satisfies Concept[],
 
   designNotes: [
     {

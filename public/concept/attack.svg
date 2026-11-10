@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Segoe UI, Leelawadee UI, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060a12"/>
+      <stop offset="1" stop-color="#1b2a3a"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d3150"/>
+      <stop offset=".5" stop-color="#061424"/>
+      <stop offset="1" stop-color="#02060d"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16395a"/>
+      <stop offset=".55" stop-color="#081a2c"/>
+      <stop offset="1" stop-color="#02060d"/>
+    </linearGradient>
+    <radialGradient id="eye"><stop offset="0" stop-color="#ffd0d7"/><stop offset=".35" stop-color="#ff2e4d"/><stop offset="1" stop-color="#ff2e4d" stop-opacity="0"/></radialGradient>
+    <radialGradient id="blast" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(735 395) scale(420)">
+      <stop offset="0" stop-color="#5fe3d0" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#5fe3d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="150" fill="url(#sky)"/>
+  <!-- lightning -->
+  <path d="M180 0l-20 50 14 0 -26 60" stroke="#cfe8ff" stroke-opacity=".5" stroke-width="2" fill="none"/>
+  <rect y="140" width="1200" height="560" fill="url(#sea)"/>
+  <path d="M0 140 Q50 128 100 140 T200 140 T300 140 T400 140 T500 140 T600 140 T700 140 T800 140 T900 140 T1000 140 T1100 140 T1200 140" fill="none" stroke="#9fd4ef" stroke-opacity=".5" stroke-width="2"/>
+
+  <!-- cargo ship -->
+  <g>
+    <path d="M690 112 H1080 L1050 168 H730 Z" fill="#141c26" stroke="#3a4a5c"/>
+    <rect x="980" y="70" width="60" height="42" fill="#1c2633" stroke="#3a4a5c"/>
+    <rect x="1000" y="50" width="12" height="20" fill="#1c2633"/>
+    <g fill="#24303f" stroke="#3a4a5c" stroke-width=".8">
+      <rect x="720" y="92" width="50" height="20"/><rect x="772" y="92" width="50" height="20"/>
+      <rect x="824" y="92" width="50" height="20"/><rect x="876" y="92" width="50" height="20"/>
+      <rect x="746" y="72" width="50" height="20"/><rect x="850" y="72" width="50" height="20"/>
+    </g>
+    <circle cx="992" cy="84" r="3" fill="#ffcf6b"/><circle cx="1008" cy="84" r="3" fill="#ffcf6b"/>
+    <!-- hull cracks -->
+    <g stroke="#ff2e4d" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M800 168 l8 -14 -6 -10 10 -12"/>
+      <path d="M880 168 l-6 -18 8 -8 -4 -14"/>
+      <path d="M950 168 l10 -12 -4 -14"/>
+    </g>
+  </g>
+
+  <!-- sonar blast -->
+  <circle cx="735" cy="395" r="420" fill="url(#blast)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M735 395 m-60 -60 a85 85 0 0 1 120 0" stroke="#5fe3d0" stroke-width="5" stroke-opacity=".9"/>
+    <path d="M735 395 m-100 -110 a150 150 0 0 1 200 0" stroke="#5fe3d0" stroke-width="4" stroke-opacity=".7"/>
+    <path d="M735 395 m-140 -160 a213 213 0 0 1 280 0" stroke="#7fe9da" stroke-width="3" stroke-opacity=".5"/>
+    <path d="M735 395 m-180 -205 a275 275 0 0 1 360 0" stroke="#ff2e4d" stroke-width="2.5" stroke-opacity=".55"/>
+  </g>
+
+  <!-- whale facing right, rising -->
+  <g transform="translate(770 300) rotate(-12) scale(-1.1 1.1)">
+    <path fill="url(#body)" stroke="#5fe3d0" stroke-opacity=".5" stroke-width="1" d="M30 72 C30 46, 60 34, 124 34 L300 40 C380 46, 450 70, 500 94 L536 104 C556 80, 574 60, 596 48 C588 78, 576 98, 564 112 C578 126, 588 146, 596 172 C572 158, 554 138, 536 120 L500 126 C440 152, 360 166, 270 166 C200 166, 150 156, 112 140 L58 134 C44 133, 38 130, 42 126 L96 120 C58 114, 30 100, 30 72 Z"/>
+    <path d="M190 150 C200 172, 222 186, 246 188 C232 176, 222 162, 218 150 Z" fill="#06121f"/>
+    <g stroke="#d9d2c3" stroke-opacity=".35" stroke-width="1.2"><path d="M220 60l26 18M250 54l18 20M300 62l30 12M330 90l22 -6M270 110l34 6"/></g>
+    <circle cx="132" cy="104" r="18" fill="url(#eye)"/>
+    <circle cx="132" cy="104" r="3" fill="#ffe3e7"/>
+  </g>
+
+  <!-- bubbles -->
+  <g fill="none" stroke="#9fd4ef" stroke-opacity=".5">
+    <circle cx="200" cy="330" r="5"/><circle cx="240" cy="290" r="3"/><circle cx="160" cy="270" r="4"/>
+    <circle cx="300" cy="250" r="6"/><circle cx="360" cy="300" r="3"/><circle cx="420" cy="240" r="4"/>
+  </g>
+
+  <text x="40" y="630" fill="#5fe3d0" font-size="15" letter-spacing="4">CONCEPT 03 · ABILITY</text>
+  <text x="40" y="666" fill="#dce8f2" font-size="30" font-weight="700">DEATH CLICK — 230 dB</text>
+</svg>

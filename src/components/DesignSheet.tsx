@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { character } from '../data/character';
 import { useLang } from '../i18n/LanguageContext';
 import { ui } from '../i18n/ui';
+import { ConceptGallery } from './ConceptGallery';
 import { Section } from './Section';
 import { WhaleSvg } from './WhaleSvg';
 
@@ -22,6 +23,12 @@ export function DesignSheet() {
   return (
     <Section id="design" kicker={t(ui.design.kicker)} title={t(ui.design.title)}>
       <div className="design">
+        <div className="card design__turn">
+          <h3>{t(ui.design.concepts)}</h3>
+          <p className="muted">{t(ui.design.conceptsHint)}</p>
+          <ConceptGallery />
+        </div>
+
         <div className="card design__turn">
           <h3>{t(ui.design.silhouette)}</h3>
           <WhaleSvg className="design__whale" />
