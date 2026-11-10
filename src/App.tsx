@@ -13,7 +13,10 @@ import { useLang } from './i18n/LanguageContext';
 import { ui } from './i18n/ui';
 
 export default function App() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
+  const today = new Date().toLocaleDateString(lang === 'th' ? 'th-TH' : 'en-GB', {
+    dateStyle: 'long',
+  });
 
   useEffect(() => {
     document.title = t(ui.pageTitle);
@@ -23,6 +26,14 @@ export default function App() {
   return (
     <>
       <OceanBackground />
+      <div className="print-header" aria-hidden="true">
+        <span>
+          {character.name.en.toUpperCase()} · {t(ui.pdf.header)}
+        </span>
+        <span>
+          {t(ui.pdf.exported)} {today}
+        </span>
+      </div>
       <Nav />
       <DepthMeter />
       <main>

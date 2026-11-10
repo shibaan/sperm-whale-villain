@@ -87,6 +87,16 @@ export const ui = {
     next: { th: 'ภาพถัดไป', en: 'Next image' },
   },
 
+  pdf: {
+    tooltip: {
+      th: 'ส่งออกแฟ้มตัวละครเป็น PDF (เลือก “บันทึกเป็น PDF” ในหน้าต่างพิมพ์)',
+      en: 'Export the dossier as PDF (choose “Save as PDF” in the print dialog)',
+    },
+    preparing: { th: 'กำลังเตรียม…', en: 'Preparing…' },
+    header: { th: 'แฟ้มตัวละครวายร้าย', en: 'Villain Character Dossier' },
+    exported: { th: 'ส่งออกเมื่อ', en: 'Exported' },
+  },
+
   footer: {
     text: { th: 'แฟ้มออกแบบตัวละคร — แก้ข้อมูลได้ที่', en: 'Character design file — edit the data in' },
   },

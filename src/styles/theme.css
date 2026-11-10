@@ -300,6 +300,10 @@ main {
   margin-top: 0.3em;
   padding-left: 0.6em;
 }
+.hero__name span:lang(th) {
+  letter-spacing: 0.12em;
+  padding-left: 0.12em;
+}
 .hero__title {
   font-family: var(--font-head);
   font-size: clamp(1.1rem, 2.6vw, 1.5rem);
@@ -940,6 +944,248 @@ main {
   }
   .section {
     padding-top: 72px;
+  }
+}
+
+.btn--small {
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  letter-spacing: 0.05em;
+}
+.print-header {
+  display: none;
+}
+
+/* ===== ส่งออก PDF / พิมพ์ ===== */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 14mm 16mm;
+  }
+
+  :root {
+    --text: #0b1a2a;
+    --muted: #4a5d70;
+    --line: #d3dce5;
+    --card: #ffffff;
+    --cyan: #0b7f72;
+    --cyan-soft: rgba(11, 127, 114, 0.1);
+    --blood: #c8102e;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    font-size: 10.5pt;
+    line-height: 1.6;
+  }
+  body::before,
+  body::after,
+  .ocean,
+  .nav,
+  .depth,
+  .hero__cta,
+  .stats__toolbar,
+  .stats__hint,
+  .lightbox,
+  .footer,
+  .design .muted {
+    display: none !important;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .print-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-head);
+    font-size: 8pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1.5px solid var(--text);
+    padding-bottom: 6px;
+    margin-bottom: 6mm;
+  }
+
+  /* ----- ปก ----- */
+  .hero {
+    min-height: 0;
+    padding: 4mm 0 2mm;
+    break-after: avoid;
+  }
+  .hero__name {
+    font-size: 40pt;
+    background: none;
+    color: var(--text);
+    filter: none;
+  }
+  .hero__name span {
+    color: var(--muted);
+  }
+  .hero__whale {
+    width: 150mm;
+    margin: 4mm 0;
+  }
+  .whale-rim {
+    opacity: 0.08;
+  }
+  .hero__quote {
+    color: var(--text);
+    font-style: italic;
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  /* ----- ส่วนต่างๆ ----- */
+  .section {
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 7mm 0 0;
+  }
+  .section__title {
+    font-size: 17pt;
+    margin-bottom: 4mm;
+    break-after: avoid;
+  }
+  .eyebrow {
+    break-after: avoid;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 4mm 5mm;
+    backdrop-filter: none;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  .card--accent {
+    background: #f1faf8;
+    border-color: #a8d9d1;
+  }
+  .card--danger {
+    background: #fdf2f4;
+    border-color: #f0b3bf;
+  }
+  .card--danger h3 {
+    color: var(--blood);
+  }
+
+  .profile {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4mm;
+  }
+  .profile__row {
+    padding: 2mm 0;
+  }
+
+  .stats {
+    grid-template-columns: 45mm 1fr;
+    gap: 4mm;
+  }
+  .stats__score {
+    background: #fdf2f4;
+  }
+  .stats__number {
+    color: var(--text);
+    text-shadow: none !important;
+    font-size: 36pt;
+  }
+  .stats__bars {
+    gap: 3mm;
+  }
+  .bar,
+  .slider {
+    background: #e6ecf1;
+    height: 6px;
+  }
+  .bar__fill {
+    width: var(--w) !important;
+    box-shadow: none;
+  }
+  .slider::-webkit-slider-thumb {
+    display: none;
+  }
+  .diff {
+    display: none;
+  }
+
+  .abilities {
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+  }
+  .ability::after {
+    display: none;
+  }
+  .ability p:not(.ability__tag),
+  .timeline__item p {
+    color: var(--text);
+  }
+  .ability__icon {
+    width: 9mm;
+    height: 9mm;
+    margin-bottom: 2mm;
+  }
+
+  .timeline__item {
+    padding-bottom: 5mm;
+    break-inside: avoid;
+    max-width: none;
+  }
+  .timeline__item::before {
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .stats__score--high .stats__rank { color: #b4500f; }
+  .stats__score--mid .stats__rank { color: #8a6d00; }
+
+  .design {
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+  }
+  .card.design__turn {
+    break-inside: auto;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+  }
+  .gallery li {
+    break-inside: avoid;
+  }
+  .gallery__item {
+    background: #fff;
+    border-radius: 6px;
+    transform: none !important;
+  }
+  .gallery__meta {
+    padding: 2mm 3mm;
+  }
+  .gallery__item img {
+    transform: none !important;
+  }
+  .design__whale {
+    filter: brightness(0);
+    width: 110mm;
+  }
+  .swatch {
+    padding: 1.5mm 0;
+  }
+  .swatch__chip {
+    width: 9mm;
+    height: 9mm;
+    border-color: var(--line);
   }
 }
 

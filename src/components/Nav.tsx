@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { character } from '../data/character';
 import { useLang, type Lang } from '../i18n/LanguageContext';
 import { ui } from '../i18n/ui';
+import { ExportPdfButton } from './ExportPdfButton';
 
 const links = [
   { href: '#profile', label: ui.nav.profile },
@@ -35,6 +36,7 @@ export function Nav() {
       </nav>
 
       <div className="nav__actions">
+        <ExportPdfButton />
         <div className="lang" role="group" aria-label={t(ui.nav.language)}>
           {langs.map((l) => (
             <button
